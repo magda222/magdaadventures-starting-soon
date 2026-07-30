@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>MagdaAdventures - Starting Soon</title>
+</head>
+<body style="background:black;color:white;font-family:Arial;text-align:center;">
+<h1>MAGDAADVENTURES</h1>
+<h2>STREAM INICIANDO</h2>
+<h1 id="timer">05:00</h1>
+
+<script>
+let time=300;
+
+setInterval(()=>{
+let m=Math.floor(time/60);
+let s=time%60;
+document.getElementById("timer").innerHTML=
+String(m).padStart(2,"0")+":"+String(s).padStart(2,"0");
+
+if(time>0) time--;
+},1000);
+</script>
+
+</body>
+</html>
